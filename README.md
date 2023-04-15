@@ -1,6 +1,6 @@
-# Training of Kubernetes and Monitoring as Code
+# Training of Kubernetes and DataDog Monitoring
 
-This Repository is practice for Kubernetes and DataDog Monitoring as Code.
+This Repository is practice for Kubernetes and DataDog Monitoring.
 
 ## USAGE
 
