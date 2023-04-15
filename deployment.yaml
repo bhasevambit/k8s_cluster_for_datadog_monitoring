@@ -19,9 +19,9 @@ spec:
         ad.datadoghq.com/sample-api.logs: '[{"source":"express","service":"api"}]'
       labels:
         app: sample-api
-          tags.datadoghq.com/env: "test"
-          tags.datadoghq.com/service: "api"
-          tags.datadoghq.com/version: "1.0.0"
+        tags.datadoghq.com/env: "test"
+        tags.datadoghq.com/service: "api"
+        tags.datadoghq.com/version: "1.0.0"
     spec:
       containers:
         - image: bhasevambit/sample_api_for_k8s_datadog_monitoring
