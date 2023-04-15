@@ -16,5 +16,5 @@ spec:
         app: sample-api
     spec:
       containers:
-        - image: bhasevambit/k8s_cluster_monitoring_as_code_sample_api
+        - image: bhasevambit/sample_api_for_k8s_datadog_monitoring
           name: sample-api
