@@ -1,3 +1,4 @@
 dd-api-key-secret.yaml
 datadog-values.yaml
 **/api/node_modules
+Datadog_Agent_install.sh
