@@ -1,4 +1,4 @@
-#/usr/bin/bash
+#!/usr/bin/bash
 
 cd ./api
 docker build . -t sample_api_for_k8s_datadog_monitoring
