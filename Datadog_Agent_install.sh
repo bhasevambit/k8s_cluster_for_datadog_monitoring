@@ -1,6 +1,10 @@
 #!/usr/bin/bash
 
 
+# --- helm repo install & update ---
+helm repo add datadog https://helm.datadoghq.com
+helm repo update
+
 # --- minikube向けの「Unable to detect the kubelet URL automatically(キューブレット URL を自動的に検出できません)」エラー対策 ---
 DD_KUBELET_TLS_VERIFY=false
 echo "DD_KUBELET_TLS_VERIFY = "${DD_KUBELET_TLS_VERIFY}
