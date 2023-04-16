@@ -5,6 +5,9 @@
 DD_KUBELET_TLS_VERIFY=false
 echo "DD_KUBELET_TLS_VERIFY = "${DD_KUBELET_TLS_VERIFY}
 
+# --- 必須環境変数の設定状況確認 ---
+echo "DD_API_KEY = "${DD_API_KEY}
+echo "DD_APP_KEY = "${DD_APP_KEY}
 
 # --- helm用いたDatadog Agentインストール ---
-helm install datadog -f datadog-values.yaml --set datadog.site='ap1.datadoghq.com' --set datadog.apiKey='${DD_API_KEY}' --set datadog.appKey='${DD_APP_KEY}' datadog/datadog 
+helm install datadog -f datadog-values.yaml --set datadog.site='ap1.datadoghq.com' --set datadog.apiKey=${DD_API_KEY} --set datadog.appKey=${DD_APP_KEY} datadog/datadog 
