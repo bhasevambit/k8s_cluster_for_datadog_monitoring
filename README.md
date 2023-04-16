@@ -7,6 +7,7 @@ This Repository is practice for Kubernetes and DataDog Monitoring.
 ## Note
 
 - `dd-api-key-secret.yaml` file is needed
+- `datadog-values.yaml` file is needed
 
 ## Reference
 
