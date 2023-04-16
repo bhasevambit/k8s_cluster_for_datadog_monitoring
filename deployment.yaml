@@ -22,6 +22,8 @@ spec:
         tags.datadoghq.com/env: "test"
         tags.datadoghq.com/service: "api"
         tags.datadoghq.com/version: "1.0.0"
+        admission.datadoghq.com/enabled: "true"
+        admission.datadoghq.com/config.mode: "socket"
     spec:
       containers:
         - image: bhasevambit/sample_api_for_k8s_datadog_monitoring:latest
@@ -31,6 +33,12 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: status.hostIP
+            - name: DD_PROFILING_ENABLED
+              value: "true"
+            - name: DD_LOGS_INJECTION
+              value: "true"
+            - name: DD_TRACE_SAMPLE_RATE
+              value: "1"
             - name: DD_ENV
               valueFrom:
                 fieldRef:
@@ -39,8 +47,6 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.labels['tags.datadoghq.com/version']
-            - name: DD_LOGS_INJECTION
-              value: "true"
             - name: DD_API_KEY
               valueFrom:
                 secretKeyRef:
