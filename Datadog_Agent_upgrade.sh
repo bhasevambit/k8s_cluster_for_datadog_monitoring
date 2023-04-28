@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 
 # --- minikube向けの「Unable to detect the kubelet URL automatically(キューブレット URL を自動的に検出できません)」エラー対策 ---
 DD_KUBELET_TLS_VERIFY=false

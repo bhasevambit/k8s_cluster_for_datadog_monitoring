@@ -1,4 +1,3 @@
-#!/usr/bin/bash
 
 echo "--- datadog/api-key ---"
 kubectl get secret datadog -o json | jq -r '.data."api-key"' | base64 --decode

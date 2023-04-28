@@ -1,4 +1,3 @@
-#!/usr/bin/bash
 
 kubectl delete -f Deployment.yaml
 kubectl delete -f Service.yaml

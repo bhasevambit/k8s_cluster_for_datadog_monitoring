@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 
 # --- helm repo install & update ---
 helm repo add datadog https://helm.datadoghq.com

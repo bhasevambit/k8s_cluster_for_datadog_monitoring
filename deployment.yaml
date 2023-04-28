@@ -26,8 +26,12 @@ spec:
         admission.datadoghq.com/config.mode: "socket"
     spec:
       containers:
-        - image: bhasevambit/sample_api_for_k8s_datadog_monitoring:latest
-          name: sample-api
+        - name: sample-api
+          image: bhasevambit/sample_api_for_k8s_datadog_monitoring:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
           env:
             - name: DD_AGENT_HOST
               valueFrom:
